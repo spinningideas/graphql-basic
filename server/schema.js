@@ -1,24 +1,24 @@
-const {	gql } = require('apollo-server-express');
+const { gql } = require('apollo-server-express');
 // The GraphQL schema in string form
-const schema = gql `
-	type Query { 
-		continents: [Continent] 
-		countries(continentCode:String!): [Country]	
+const schema = gql`
+	type Query {
+		continents: [Continent]
+		countries(continentCode: String!): [Country]
 	}
-	
-	type Continent { 
-		continentId: String! 
+
+	type Continent {
+		continentId: String!
 		continentCode: String!
-		continentName: String! 
+		continentName: String!
 	}
-	
-	type Country { 
+
+	type Country {
 		countryId: String!
 		countryName: String!
-		countryCode: String! 
-		countryCode3: String! 
-    capital: String
-    continentCode: String!
+		countryCode: String!
+		countryCode3: String!
+		capital: String
+		continentCode: String!
 		area: Int
 		population: Int
 		lat: Float!
