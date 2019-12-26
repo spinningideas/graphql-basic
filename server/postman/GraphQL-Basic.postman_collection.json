@@ -55,7 +55,7 @@
 						""
 					]
 				},
-				"description": "Get full list of Continents"
+				"description": "Get full list of Countries in given Continent"
 			},
 			"response": []
 		}
