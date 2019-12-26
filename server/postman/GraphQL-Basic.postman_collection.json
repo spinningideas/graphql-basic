@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "8476ca5c-f979-4d43-bc95-e92dd309c484",
+		"name": "GraphQL-Basic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Continents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\r\n  continents{\r\n    continentCode\r\n    continentName\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						""
+					]
+				},
+				"description": "Get full list of Continents"
+			},
+			"response": []
+		},
+		{
+			"name": "Countries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\r\n  countries(continentCode:\"NA\"){\r\n    countryCode\r\n    countryName\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						""
+					]
+				},
+				"description": "Get full list of Continents"
+			},
+			"response": []
+		}
+	]
+}
