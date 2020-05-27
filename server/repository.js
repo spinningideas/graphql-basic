@@ -5,14 +5,14 @@ const continentsData = JSON.parse(continents);
 const countryData = JSON.parse(countries);
 
 function repository() {
-	this.getContinents = () => {
-		return continentsData;
-	};
+  this.getContinents = () => {
+    return continentsData;
+  };
 
-	this.getCountries = async continentCode => {
-		let results = countryData.filter(x => x.continentCode == continentCode);
-		return results;
-	};
+  this.getCountries = async (continentCode) => {
+    let results = countryData.filter((x) => x.continentCode == continentCode);
+    return results;
+  };
 }
 
 module.exports = repository;

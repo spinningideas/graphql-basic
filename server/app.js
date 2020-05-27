@@ -1,5 +1,5 @@
 const express = require('express');
-const {	ApolloServer } = require('apollo-server-express');
+const { ApolloServer } = require('apollo-server-express');
 
 const schema = require('./schema.js');
 const resolvers = require('./resolvers.js');
@@ -9,22 +9,21 @@ const HOST = process.env.HOST || 'localhost';
 
 // setup server and routes
 const apolloServer = new ApolloServer({
-	typeDefs: schema,
-	resolvers,
-	introspection: true,
-	playground: true
+  typeDefs: schema,
+  resolvers,
+  introspection: true,
+  playground: true
 });
 
 const expressApp = express();
 
 apolloServer.applyMiddleware({
-	app: expressApp,
-	path: '/',
-	cors: true,
-	disableHealthCheck: true
+  app: expressApp,
+  path: '/',
+  cors: true,
+  disableHealthCheck: true
 });
 
-
 expressApp.listen(PORT, () => {
-	console.log(`Server running at ${HOST}:${PORT} `);
+  console.log(`Server running at ${HOST}:${PORT} `);
 });
