@@ -4,7 +4,7 @@
   "description": "Reference implementation of basic graphQL server",
   "main": "app.js",
   "dependencies": {
-    "apollo-server-express": "^2.13.1",
+    "apollo-server-express": "^2.14.2",
     "express": "^4.17.1",
     "graphql-tools": "^6.0.1"
   },
